@@ -54,4 +54,60 @@ git clone https://github.com/YOUR_USERNAME/vuln_hunter.git
 cd vuln_hunter
 chmod +x vuln_hunter.py
 python3 vuln_hunter.py [options]
+```
 
+## Usage 
+
+```bash
+python3 vuln_hunter.py [options]
+```
+
+## Options
+
+| Flag | Default | Description |
+| --- | --- | --- |
+| -w, --workers | 48 | Number of concurrent workers |
+| -v, --verbose | off | Show every IP, open port, and probe result |
+| -h, --help | — | Show help message |
+
+## Examples
+
+```bash
+# Quiet mode
+python3 vuln_hunter.py
+
+# Verbose mode
+python3 vuln_hunter.py -v
+
+# Lower concurrency
+python3 vuln_hunter.py -w 16 -v
+```
+
+## Output 
+- Progress information (quiet mode)
+- Detailed per-host output (verbose mode)
+- Final vulnerable host written to `vuln_hit.txt`
+
+## Important Limitations 
+
+- IPv4 only
+- No exploit payloads
+- No brute-force or credential attacks
+- No guarantee of accuracy
+- Results may include false positives or false negatives
+- Network conditions heavily affect performance and results
+
+## License
+
+This project is released under the MIT License. See the LICENSE.md file for details.
+
+## Author’s Note
+
+This tool was written for educational purposes and authorized security research.
+If you use it, you do so at your own risk. The author does not condone or support illegal activity.
+
+## Contributing
+
+Contributions that improve detection accuracy, add authorized testing features, or strengthen safety controls are welcome.
+
+Do not submit code whose primary purpose is unauthorized access or exploitation.
