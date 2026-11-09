@@ -53,3 +53,5 @@ This tool does **not** contain exploits that take control of remote systems. It 
 git clone https://github.com/YOUR_USERNAME/vuln_hunter.git
 cd vuln_hunter
 chmod +x vuln_hunter.py
+python3 vuln_hunter.py [options]
+
